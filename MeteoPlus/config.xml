@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="fr.xavierdono.fr" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Météo Plus</name>
+    <description>
+        Météo Plus Tuto
+    </description>
+    <author email="xavier.dono@gmail.com" href="http://www.google.fr">
+        Xavier DONO
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+</widget>
