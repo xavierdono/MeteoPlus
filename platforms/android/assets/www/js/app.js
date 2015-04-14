@@ -31,16 +31,23 @@ app.controller('WeatherCtrl', function ($scope, $http) {
     $scope.search = function () {
         var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10";
         $scope.loader = true;
-        $http.get(url).success(function (response) {
-            $scope.loader = false;
-            $scope.weather = response;
-        }).error(function () {
-            $scope.loader = false;
-            alert('Impossible de récupérer les informations !');
+        $http.get(url).success(onSuccess).error(onError);
+    };
+
+    $scope.geolocate = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+
+            $http.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&mode=json&units=metric&cnt=10").success(onSuccess).error(onError);
         });
     };
 
-    $scope.geolocate = function() {
+    var onSuccess = function (position) {
+        $scope.loader = false;
+        $scope.weather = position;
+    };
 
+    function onError(error) {
+        $scope.loader = false;
+        alert(error.message);
     };
 });
