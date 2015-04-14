@@ -39,4 +39,8 @@ app.controller('WeatherCtrl', function ($scope, $http) {
             alert('Impossible de récupérer les informations !');
         });
     };
+
+    $scope.geolocate = function() {
+
+    };
 });
