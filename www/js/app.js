@@ -25,6 +25,8 @@ app.controller('NavCtrl', function ($scope) {
 
 app.controller('WeatherCtrl', function ($scope, $http) {
 
+    $scope.panel = 0;
+
     $scope.Math = Math;
     $scope.city = "Montpellier";
 
@@ -36,12 +38,18 @@ app.controller('WeatherCtrl', function ($scope, $http) {
 
     $scope.geolocate = function () {
         navigator.geolocation.getCurrentPosition(function (position) {
-
+            $scope.loader = true;
             $http.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&mode=json&units=metric&cnt=10").success(onSuccess).error(onError);
         });
     };
 
+    $scope.expand = function(e) {
+        $(e.currentTarget).addClass("row_active");
+        $(e.currentTarget).siblings().removeClass("row_active");
+    }
+
     var onSuccess = function (position) {
+        $scope.panel = 1;
         $scope.loader = false;
         $scope.weather = position;
     };
@@ -50,4 +58,6 @@ app.controller('WeatherCtrl', function ($scope, $http) {
         $scope.loader = false;
         alert(error.message);
     };
+
+    $scope.search();
 });
