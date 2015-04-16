@@ -29,6 +29,10 @@ a {
 	text-decoration: none;
 }
 
+td {
+    padding: 5px;
+}
+
 input.text {
     display: block;
     width: 100%;
@@ -126,7 +130,6 @@ input.submit,
             font-size: 50px;
             float: left;
             line-height: 120px;
-            // height: 80px;
             margin-left: 15px;
         }
         span {
@@ -135,7 +138,30 @@ input.submit,
             height: 120px;
             line-height: 120px;
         }
+        .info_plus_visible {
+            visibility: visible;
+
+            margin-left: 50px;
+            vertical-align: middle;
+            float: left;
+        }
     }
+}
+
+.info_plus_visible {
+    visibility: hidden;
+}
+
+.back {
+    display: block;
+    position: absolute;
+    top: -60px; left: 0;
+    color: #fff;
+    z-index: 10;
+    width: 60px; height: 60px; line-height: 60px;
+    font-size: 35px;
+    margin-left: 6px;
+    cursor: pointer;
 }
 
 .loader {
@@ -226,15 +252,19 @@ input.submit,
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src: url('fonts/icomoon.woff?-6ervqg') format('woff'), url('fonts/icomoon.ttf?-6ervqg') format('truetype'), url('fonts/icomoon.svg?-6ervqg#icomoon') format('svg');
+    font-family: 'MeteoconsRegular';
+    src: url('fonts/meteocons-webfont.eot');
+    src: url('fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/meteocons-webfont.woff') format('woff'),
+        url('fonts/meteocons-webfont.ttf') format('truetype'),
+        url('fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-    font-family: 'icomoon';
+    font-family: 'MeteoconsRegular';
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -246,15 +276,15 @@ input.submit,
 }
 
 .icon-home:before {
-    content: "\e60a";
+    content: "'";
+    font-size: 35px;
+    vertical-align: middle;
 }
 
 .icon-earth:before {
-    content: "\e60b";
-}
-
-.icon-spinner:before {
-    content: "\e60c";
+    content: "G";
+    font-size: 35px;
+    vertical-align: middle;
 }
 
 .icon-arrow-left:before {
@@ -263,35 +293,35 @@ input.submit,
 
 .icon-sun:before,
 .icon-clear:before {
-    content: "\e60e";
+    content: "B";
 }
 
 .icon-cloudy:before {
-    content: "\e60f";
+    content: "L";
 }
 
 .icon-rain:before {
-    content: "\e610";
+    content: "R";
 }
 
 .icon-clouds:before {
-    content: "\e611";
+    content: "N";
 }
 
 .icon-snow:before {
-    content: "\e612";
+    content: "X";
 }
 
 .icon-weather:before {
-    content: "\e613";
+    content: "H";
 }
 
 .icon-storm:before {
-    content: "\e614";
+    content: "F";
 }
 
 .icon-snowy2:before {
-    content: "\e615";
+    content: "W";
 }
 
 .icon-envelope:before {

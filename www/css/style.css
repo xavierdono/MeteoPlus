@@ -98,6 +98,11 @@ a {
 }
 
 /* line 32, style.scss */
+td {
+  padding: 5px;
+}
+
+/* line 36, style.scss */
 input.text {
   display: block;
   width: 100%;
@@ -120,12 +125,12 @@ input.text {
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 45, style.scss */
+/* line 49, style.scss */
 input.text:focus {
   border: 1px solid #11a7ab;
 }
 
-/* line 50, style.scss */
+/* line 54, style.scss */
 input.submit,
 .btn {
   display: inline-block;
@@ -149,13 +154,13 @@ input.submit,
   text-decoration: none;
 }
 
-/* line 68, style.scss */
+/* line 72, style.scss */
 .btn {
   background-color: #11a7ab;
   float: left;
 }
 
-/* line 73, style.scss */
+/* line 77, style.scss */
 .row-title {
   height: 60px;
   line-height: 60px;
@@ -174,7 +179,7 @@ input.submit,
   font-weight: bold;
 }
 
-/* line 86, style.scss */
+/* line 90, style.scss */
 .row {
   height: 60px;
   background-color: #394163;
@@ -182,7 +187,7 @@ input.submit,
   color: #fff;
   font-size: 18px;
 }
-/* line 92, style.scss */
+/* line 96, style.scss */
 .row .temperature {
   text-align: right;
   padding-right: 20px;
@@ -190,19 +195,19 @@ input.submit,
   float: right;
   margin-left: 40px;
 }
-/* line 99, style.scss */
+/* line 103, style.scss */
 .row .date {
   float: right;
   color: #1f253d;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 104, style.scss */
+/* line 108, style.scss */
 .row .date strong {
   color: #fff;
   margin-right: 5px;
 }
-/* line 109, style.scss */
+/* line 113, style.scss */
 .row span {
   float: left;
   padding-left: 20px;
@@ -211,39 +216,67 @@ input.submit,
   line-height: 60px;
   margin-right: 30px;
 }
-/* line 117, style.scss */
+/* line 121, style.scss */
 .row.row_active {
   height: 120px;
   background-color: #e54b65;
 }
-/* line 120, style.scss */
+/* line 124, style.scss */
 .row.row_active .date {
   color: #fff;
   float: left;
   line-height: 120px;
 }
-/* line 125, style.scss */
+/* line 129, style.scss */
 .row.row_active .temperature {
   font-size: 50px;
   float: left;
   line-height: 120px;
   margin-left: 15px;
 }
-/* line 132, style.scss */
+/* line 135, style.scss */
 .row.row_active span {
   float: right;
   font-size: 95px;
   height: 120px;
   line-height: 120px;
 }
-
 /* line 141, style.scss */
+.row.row_active .info_plus_visible {
+  visibility: visible;
+  margin-left: 50px;
+  vertical-align: middle;
+  float: left;
+}
+
+/* line 151, style.scss */
+.info_plus_visible {
+  visibility: hidden;
+}
+
+/* line 155, style.scss */
+.back {
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  color: #fff;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* line 167, style.scss */
 .loader {
   background: url("../images/loading.gif") center center no-repeat rgba(57, 66, 100, 0.6);
   z-index: 500;
 }
 
-/* line 147, style.scss */
+/* line 173, style.scss */
 .header {
   position: absolute;
   top: 0;
@@ -257,7 +290,7 @@ input.submit,
   background-color: #11a7ab;
 }
 
-/* line 160, style.scss */
+/* line 186, style.scss */
 .view {
   position: absolute;
   top: 60px;
@@ -266,7 +299,7 @@ input.submit,
   right: 0;
 }
 
-/* line 168, style.scss */
+/* line 194, style.scss */
 .nav {
   position: absolute;
   bottom: 0;
@@ -279,7 +312,7 @@ input.submit,
   overflow: hidden;
   *zoom: 1;
 }
-/* line 178, style.scss */
+/* line 204, style.scss */
 .nav a {
   display: block;
   width: 50%;
@@ -291,24 +324,24 @@ input.submit,
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 186, style.scss */
+/* line 212, style.scss */
 .nav a:first-child {
   border-right: 1px solid #1f253d;
 }
-/* line 189, style.scss */
+/* line 215, style.scss */
 .nav .active {
   border-top: 3px solid #11a7ab;
 }
-/* line 192, style.scss */
+/* line 218, style.scss */
 .nav i {
   margin-top: 15px;
 }
-/* line 195, style.scss */
+/* line 221, style.scss */
 .nav span {
   margin-top: 15px;
 }
 
-/* line 200, style.scss */
+/* line 226, style.scss */
 .panel, .loader {
   position: absolute;
   bottom: 0;
@@ -324,12 +357,12 @@ input.submit,
   transition-duration: 0.5s;
 }
 
-/* line 212, style.scss */
+/* line 238, style.scss */
 .panel-padding {
   padding: 0 25px;
 }
 
-/* line 216, style.scss */
+/* line 242, style.scss */
 .left {
   -moz-transform: translate3D(-100%, 0, 0);
   -ms-transform: translate3D(-100%, 0, 0);
@@ -337,7 +370,7 @@ input.submit,
   transform: translate3D(-100%, 0, 0);
 }
 
-/* line 220, style.scss */
+/* line 246, style.scss */
 .center {
   -moz-transform: translate3D(0, 0, 0);
   -ms-transform: translate3D(0, 0, 0);
@@ -345,7 +378,7 @@ input.submit,
   transform: translate3D(0, 0, 0);
 }
 
-/* line 224, style.scss */
+/* line 250, style.scss */
 .right {
   -moz-transform: translate3D(100%, 0, 0);
   -ms-transform: translate3D(100%, 0, 0);
@@ -354,15 +387,16 @@ input.submit,
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("fonts/icomoon.woff?-6ervqg") format("woff"), url("fonts/icomoon.ttf?-6ervqg") format("truetype"), url("fonts/icomoon.svg?-6ervqg#icomoon") format("svg");
+  font-family: 'MeteoconsRegular';
+  src: url("fonts/meteocons-webfont.eot");
+  src: url("fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/meteocons-webfont.woff") format("woff"), url("fonts/meteocons-webfont.ttf") format("truetype"), url("fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/* line 235, style.scss */
+/* line 265, style.scss */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'icomoon';
+  font-family: 'MeteoconsRegular';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -373,68 +407,67 @@ input.submit,
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 248, style.scss */
+/* line 278, style.scss */
 .icon-home:before {
-  content: "\e60a";
+  content: "'";
+  font-size: 35px;
+  vertical-align: middle;
 }
 
-/* line 252, style.scss */
+/* line 284, style.scss */
 .icon-earth:before {
-  content: "\e60b";
+  content: "G";
+  font-size: 35px;
+  vertical-align: middle;
 }
 
-/* line 256, style.scss */
-.icon-spinner:before {
-  content: "\e60c";
-}
-
-/* line 260, style.scss */
+/* line 290, style.scss */
 .icon-arrow-left:before {
   content: "\e60d";
 }
 
-/* line 264, style.scss */
+/* line 294, style.scss */
 .icon-sun:before,
 .icon-clear:before {
-  content: "\e60e";
+  content: "B";
 }
 
-/* line 269, style.scss */
+/* line 299, style.scss */
 .icon-cloudy:before {
-  content: "\e60f";
+  content: "L";
 }
 
-/* line 273, style.scss */
+/* line 303, style.scss */
 .icon-rain:before {
-  content: "\e610";
+  content: "R";
 }
 
-/* line 277, style.scss */
+/* line 307, style.scss */
 .icon-clouds:before {
-  content: "\e611";
+  content: "N";
 }
 
-/* line 281, style.scss */
+/* line 311, style.scss */
 .icon-snow:before {
-  content: "\e612";
+  content: "X";
 }
 
-/* line 285, style.scss */
+/* line 315, style.scss */
 .icon-weather:before {
-  content: "\e613";
+  content: "H";
 }
 
-/* line 289, style.scss */
+/* line 319, style.scss */
 .icon-storm:before {
-  content: "\e614";
+  content: "F";
 }
 
-/* line 293, style.scss */
+/* line 323, style.scss */
 .icon-snowy2:before {
-  content: "\e615";
+  content: "W";
 }
 
-/* line 297, style.scss */
+/* line 327, style.scss */
 .icon-envelope:before {
   content: "\e616";
 }

@@ -26,9 +26,7 @@ app.controller('NavCtrl', function ($scope) {
 app.controller('WeatherCtrl', function ($scope, $http) {
 
     $scope.panel = 0;
-
     $scope.Math = Math;
-    $scope.city = "Montpellier";
 
     $scope.search = function () {
         var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10";
@@ -56,8 +54,6 @@ app.controller('WeatherCtrl', function ($scope, $http) {
 
     function onError(error) {
         $scope.loader = false;
-        alert(error.message);
+        alert('Impossible de récupérer les informations !');
     };
-
-    $scope.search();
 });
