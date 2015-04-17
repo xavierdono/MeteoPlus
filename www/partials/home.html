@@ -4,18 +4,21 @@
     <a class="back" ng-hide="panel==0" ng-click="panel=0">&lt;</span></a>
 
     <section class="panel panel-padding" ng-class="{center: panel==0, left:panel>0}">
-        <p>
+        <p style="text-align: center;">
             La météo en temps réél !!
             <br /> D'ici ou d'ailleurs...
         </p>
 
-        <form ng-submit="search()">
+        <form ng-submit="search()" name="formCity" novalidate>
             <p>
-                <input class="text" type="text" placeholder="Rechercher une ville" ng-model="city" />
+                <input class="text" type="text" placeholder="Rechercher une ville" ng-model="city" name="ucity" required />
             </p>
             <p>
                 <a class="btn" ng-click="geolocate()">Ma position</a>
-                <input class="submit" type="submit" value="Rechercher" />
+                <input class="submit" type="submit" value="Rechercher" ng-disabled="formCity.$invalid" />
+            </p>
+            <p>
+                <span class="error" ng-show="formCity.ucity.$invalid && !formCity.ucity.$pristine">Veuillez renseigner une ville !</span>
             </p>
 
         </form>
@@ -31,6 +34,7 @@
             <div class="temperature">{{ Math.round(t.temp.day) }}°C</div>
             <div class="date"> <strong>{{ t.dt * 1000 | date: 'EEE' }}</strong> {{ t.dt * 1000 | date: 'dd/MM' }} </div>
             <span class="icon-{{t.weather[0].main.toLowerCase()}}"></span>
+            <!--
             <div class="info_plus_visible">
                 <div style="display: inline-block;">
                     <br />
@@ -62,6 +66,7 @@
                     </table>
                 </div>
             </div>
+            -->
         </div>
     </section>
 

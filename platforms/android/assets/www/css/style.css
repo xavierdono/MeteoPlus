@@ -1,4 +1,4 @@
-/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -98,6 +98,11 @@ a {
 }
 
 /* line 32, style.scss */
+td {
+  padding: 5px;
+}
+
+/* line 36, style.scss */
 input.text {
   display: block;
   width: 100%;
@@ -120,12 +125,12 @@ input.text {
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 45, style.scss */
+/* line 49, style.scss */
 input.text:focus {
   border: 1px solid #11a7ab;
 }
 
-/* line 50, style.scss */
+/* line 54, style.scss */
 input.submit,
 .btn {
   display: inline-block;
@@ -149,13 +154,13 @@ input.submit,
   text-decoration: none;
 }
 
-/* line 68, style.scss */
+/* line 72, style.scss */
 .btn {
   background-color: #11a7ab;
   float: left;
 }
 
-/* line 73, style.scss */
+/* line 77, style.scss */
 .row-title {
   height: 60px;
   line-height: 60px;
@@ -174,15 +179,16 @@ input.submit,
   font-weight: bold;
 }
 
-/* line 86, style.scss */
+/* line 90, style.scss */
 .row {
   height: 60px;
+  line-height: 60px;
   background-color: #394163;
   margin: 1px 0;
   color: #fff;
   font-size: 18px;
 }
-/* line 92, style.scss */
+/* line 97, style.scss */
 .row .temperature {
   text-align: right;
   padding-right: 20px;
@@ -190,19 +196,19 @@ input.submit,
   float: right;
   margin-left: 40px;
 }
-/* line 99, style.scss */
+/* line 104, style.scss */
 .row .date {
   float: right;
   color: #1f253d;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 104, style.scss */
+/* line 109, style.scss */
 .row .date strong {
   color: #fff;
   margin-right: 5px;
 }
-/* line 109, style.scss */
+/* line 114, style.scss */
 .row span {
   float: left;
   padding-left: 20px;
@@ -211,39 +217,67 @@ input.submit,
   line-height: 60px;
   margin-right: 30px;
 }
-/* line 117, style.scss */
+/* line 122, style.scss */
 .row.row_active {
   height: 120px;
   background-color: #e54b65;
 }
-/* line 120, style.scss */
+/* line 125, style.scss */
 .row.row_active .date {
   color: #fff;
   float: left;
   line-height: 120px;
 }
-/* line 125, style.scss */
+/* line 130, style.scss */
 .row.row_active .temperature {
   font-size: 50px;
   float: left;
   line-height: 120px;
   margin-left: 15px;
 }
-/* line 132, style.scss */
+/* line 136, style.scss */
 .row.row_active span {
   float: right;
   font-size: 95px;
   height: 120px;
   line-height: 120px;
 }
+/* line 142, style.scss */
+.row.row_active .info_plus_visible {
+  visibility: visible;
+  margin-left: 50px;
+  vertical-align: middle;
+  float: left;
+}
 
-/* line 141, style.scss */
+/* line 152, style.scss */
+.info_plus_visible {
+  visibility: hidden;
+}
+
+/* line 156, style.scss */
+.back {
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  color: #fff;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* line 168, style.scss */
 .loader {
   background: url("../images/loading.gif") center center no-repeat rgba(57, 66, 100, 0.6);
   z-index: 500;
 }
 
-/* line 147, style.scss */
+/* line 174, style.scss */
 .header {
   position: absolute;
   top: 0;
@@ -257,7 +291,7 @@ input.submit,
   background-color: #11a7ab;
 }
 
-/* line 160, style.scss */
+/* line 187, style.scss */
 .view {
   position: absolute;
   top: 60px;
@@ -266,7 +300,7 @@ input.submit,
   right: 0;
 }
 
-/* line 168, style.scss */
+/* line 195, style.scss */
 .nav {
   position: absolute;
   bottom: 0;
@@ -279,7 +313,7 @@ input.submit,
   overflow: hidden;
   *zoom: 1;
 }
-/* line 178, style.scss */
+/* line 205, style.scss */
 .nav a {
   display: block;
   width: 50%;
@@ -291,24 +325,24 @@ input.submit,
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 186, style.scss */
+/* line 213, style.scss */
 .nav a:first-child {
   border-right: 1px solid #1f253d;
 }
-/* line 189, style.scss */
+/* line 216, style.scss */
 .nav .active {
   border-top: 3px solid #11a7ab;
 }
-/* line 192, style.scss */
+/* line 219, style.scss */
 .nav i {
   margin-top: 15px;
 }
-/* line 195, style.scss */
+/* line 222, style.scss */
 .nav span {
   margin-top: 15px;
 }
 
-/* line 200, style.scss */
+/* line 227, style.scss */
 .panel, .loader {
   position: absolute;
   bottom: 0;
@@ -324,12 +358,12 @@ input.submit,
   transition-duration: 0.5s;
 }
 
-/* line 212, style.scss */
+/* line 239, style.scss */
 .panel-padding {
   padding: 0 25px;
 }
 
-/* line 216, style.scss */
+/* line 243, style.scss */
 .left {
   -moz-transform: translate3D(-100%, 0, 0);
   -ms-transform: translate3D(-100%, 0, 0);
@@ -337,7 +371,7 @@ input.submit,
   transform: translate3D(-100%, 0, 0);
 }
 
-/* line 220, style.scss */
+/* line 247, style.scss */
 .center {
   -moz-transform: translate3D(0, 0, 0);
   -ms-transform: translate3D(0, 0, 0);
@@ -345,7 +379,7 @@ input.submit,
   transform: translate3D(0, 0, 0);
 }
 
-/* line 224, style.scss */
+/* line 251, style.scss */
 .right {
   -moz-transform: translate3D(100%, 0, 0);
   -ms-transform: translate3D(100%, 0, 0);
@@ -354,16 +388,16 @@ input.submit,
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?-6ervqg");
-  src: url("fonts/icomoon.eot?#iefix-6ervqg") format("embedded-opentype"), url("fonts/icomoon.woff?-6ervqg") format("woff"), url("fonts/icomoon.ttf?-6ervqg") format("truetype"), url("fonts/icomoon.svg?-6ervqg#icomoon") format("svg");
+  font-family: 'MeteoconsRegular';
+  src: url("fonts/meteocons-webfont.eot");
+  src: url("fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/meteocons-webfont.woff") format("woff"), url("fonts/meteocons-webfont.ttf") format("truetype"), url("fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/* line 236, style.scss */
+/* line 266, style.scss */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'icomoon';
+  font-family: 'MeteoconsRegular';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -374,68 +408,67 @@ input.submit,
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 249, style.scss */
+/* line 279, style.scss */
 .icon-home:before {
-  content: "\e60a";
+  content: "'";
+  font-size: 35px;
+  vertical-align: middle;
 }
 
-/* line 253, style.scss */
+/* line 285, style.scss */
 .icon-earth:before {
-  content: "\e60b";
+  content: "G";
+  font-size: 35px;
+  vertical-align: middle;
 }
 
-/* line 257, style.scss */
-.icon-spinner:before {
-  content: "\e60c";
-}
-
-/* line 261, style.scss */
+/* line 291, style.scss */
 .icon-arrow-left:before {
   content: "\e60d";
 }
 
-/* line 265, style.scss */
+/* line 295, style.scss */
 .icon-sun:before,
 .icon-clear:before {
-  content: "\e60e";
+  content: "B";
 }
 
-/* line 270, style.scss */
+/* line 300, style.scss */
 .icon-cloudy:before {
-  content: "\e60f";
+  content: "L";
 }
 
-/* line 274, style.scss */
+/* line 304, style.scss */
 .icon-rain:before {
-  content: "\e610";
+  content: "R";
 }
 
-/* line 278, style.scss */
+/* line 308, style.scss */
 .icon-clouds:before {
-  content: "\e611";
+  content: "N";
 }
 
-/* line 282, style.scss */
+/* line 312, style.scss */
 .icon-snow:before {
-  content: "\e612";
+  content: "X";
 }
 
-/* line 286, style.scss */
+/* line 316, style.scss */
 .icon-weather:before {
-  content: "\e613";
+  content: "H";
 }
 
-/* line 290, style.scss */
+/* line 320, style.scss */
 .icon-storm:before {
-  content: "\e614";
+  content: "F";
 }
 
-/* line 294, style.scss */
+/* line 324, style.scss */
 .icon-snowy2:before {
-  content: "\e615";
+  content: "W";
 }
 
-/* line 298, style.scss */
+/* line 328, style.scss */
 .icon-envelope:before {
   content: "\e616";
 }

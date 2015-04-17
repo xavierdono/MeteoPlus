@@ -89,6 +89,7 @@ input.submit,
 
 .row {
     height: 60px;
+    line-height: 60px;
     background-color: #394163;
     margin: 1px 0;
     color: #fff;
@@ -134,7 +135,7 @@ input.submit,
         }
         span {
             float: right;
-            font-size: 95px;
+            font-size: 80px;
             height: 120px;
             line-height: 120px;
         }
