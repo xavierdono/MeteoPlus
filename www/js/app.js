@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('deviceready', function () {
-
+    navigator.splashscreen.hide();
 }, false);
 
 var app = angular.module('app', ['ngRoute']);
@@ -29,6 +29,7 @@ app.controller('WeatherCtrl', function ($scope, $http) {
     $scope.Math = Math;
 
     $scope.search = function () {
+        Keyboard.close();
         var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10";
         $scope.loader = true;
         $http.get(url).success(onSuccess).error(onError);
@@ -50,6 +51,7 @@ app.controller('WeatherCtrl', function ($scope, $http) {
         $scope.panel = 1;
         $scope.loader = false;
         $scope.weather = position;
+
     };
 
     function onError(error) {
