@@ -29,7 +29,7 @@ app.controller('WeatherCtrl', function ($scope, $http) {
     $scope.Math = Math;
 
     $scope.search = function () {
-        // Hide keyboard
+        cordova.plugins.Keyboard.close();
         var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + $scope.city + "&mode=json&units=metric&cnt=10";
         $scope.loader = true;
         $http.get(url).success(onSuccess).error(onError);
